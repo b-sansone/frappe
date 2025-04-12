@@ -60,6 +60,7 @@ function authenticate_with_frappe(socket, next) {
 			next();
 		})
 		.catch((e) => {
+			console.log(e);
 			next(new Error(`Unauthorized: ${e}`));
 		});
 }
