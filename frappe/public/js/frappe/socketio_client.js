@@ -51,6 +51,7 @@ class RealTimeClient {
 				withCredentials: true,
 				reconnectionAttempts: 3,
 				autoConnect: !lazy_connect,
+				rejectUnauthorized: false,
 			});
 		} else if (window.location.protocol == "http:") {
 			this.socket = io(this.get_host(port), {
